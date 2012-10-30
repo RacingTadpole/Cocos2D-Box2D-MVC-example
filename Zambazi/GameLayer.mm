@@ -122,14 +122,10 @@
     return [NSString stringWithFormat:@"%@_%@", eltName, actionName];
 }
 
-//-(CGPoint) layerPosFromModelPos:(Point3D)where {
-//    return ccp(winSize.width * (where.x), winSize.height * (where.y));  // to do - temp
-//}
-
--(CGPoint) layerPosFromBox2DPos:(b2Vec2)pos {
-    float x = self.winSize.width * (pos.x/self.gameModel.worldWidth);
-    float y = self.winSize.height * (pos.y/self.gameModel.worldHeight);
-    return ccp(x, y);  // to do - temp
+-(CGPoint) layerPosFromModelPos:(Point3D)where {
+    float x = self.winSize.width * (where.x/self.gameModel.worldWidth);
+    float y = self.winSize.height * (where.y/self.gameModel.worldHeight);
+    return ccp(x, y);
 }
 
 
@@ -142,7 +138,7 @@
         if (![spritedElements containsObject:element]) {
             NSLog(@"Adding %@ %p", element.appearName, element);
             CCSprite* sprite = [CCSprite spriteWithSpriteFrame:[self.initialFrame objectForKey:element.appearName]];
-            sprite.position = [self layerPosFromBox2DPos:element.body->GetPosition()];
+            sprite.position = [self layerPosFromModelPos:element.where];
             sprite.scale = element.scale;
             [self.spriteSheet addChild:sprite];
             [self.sprites setObject:sprite forKey:element];
@@ -263,9 +259,8 @@
     NSArray* elements = [self.sprites allKeys];
     for (GameElement* element in elements) {
         CCSprite* sprite = [self.sprites objectForKey:element];
-        b2Vec2 pos = element.body->GetPosition();
-        sprite.position = [self layerPosFromBox2DPos:pos];
-        sprite.rotation = -1 * CC_RADIANS_TO_DEGREES(element.body->GetAngle());
+        sprite.position = [self layerPosFromModelPos:element.where];
+        sprite.rotation = element.rotation;
     }
 }
 

@@ -15,13 +15,13 @@
 
 @property (readwrite) float scale;
 @property (nonatomic, strong) NSString* appearName;
-@property (readwrite) b2Body* body;
 
 -(id) initWithName:(NSString*)appearName at:(Point3D)where inModel:(GameModel*)model;
 +(GameElement*) elementNamed:(NSString*)appearName at:(Point3D)where inModel:(GameModel*)model;
 
 -(Point3D) where;
 -(Point3D) velocity;
+-(float) rotation; // in degrees
 -(void) applyImpulseToVelocity:(Point3D)targetVelocity;
 
 @end

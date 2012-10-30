@@ -5,13 +5,9 @@
 //
 //
 
-#import "GameElement.h"
+#import "GameElement_Private.h"
 #import "GameModel.h"
 
-@interface GameElement () {
-}
-
-@end
 
 @implementation GameElement
 
@@ -90,6 +86,10 @@
 -(Point3D) velocity {
     b2Vec2 vec = self.body->GetLinearVelocity();
     return Point3DMake(vec.x, vec.y, 0.);
+}
+
+-(float) rotation {
+    return -1 * CC_RADIANS_TO_DEGREES(self.body->GetAngle());
 }
 
 

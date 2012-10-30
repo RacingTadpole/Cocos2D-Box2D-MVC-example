@@ -5,7 +5,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GameElement.h"
+#import "GameElement_Private.h"
 
 @interface Animal : GameElement
 

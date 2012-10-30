@@ -300,6 +300,7 @@
 		003761B61638E5C1001F25B8 /* GameElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameElement.h; sourceTree = "<group>"; };
 		003761B71638E5C1001F25B8 /* GameElement.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameElement.mm; sourceTree = "<group>"; };
 		007CD04F163F89580093C79F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		007CD051164091400093C79F /* GameElement_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameElement_Private.h; sourceTree = "<group>"; };
 		009C5035162BAD3F00C6EE18 /* Zambazi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zambazi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009C5039162BAD3F00C6EE18 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		009C503B162BAD3F00C6EE18 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -697,12 +698,13 @@
 				009C504C162BAD4000C6EE18 /* Resources */,
 				009C51BF162BAD4300C6EE18 /* Supporting Files */,
 				00309B8E162E192200D1D3C9 /* GameView.h */,
+				00309B92162E1A8A00D1D3C9 /* GameController.mm */,
 				00309B8F162E192200D1D3C9 /* GameView.mm */,
 				00309B91162E1A8A00D1D3C9 /* GameController.h */,
-				00309B92162E1A8A00D1D3C9 /* GameController.mm */,
 				00309B8B162E14E400D1D3C9 /* GameModel.h */,
 				00309B8C162E14E400D1D3C9 /* GameModel.mm */,
 				003761B61638E5C1001F25B8 /* GameElement.h */,
+				007CD051164091400093C79F /* GameElement_Private.h */,
 				003761B71638E5C1001F25B8 /* GameElement.mm */,
 				00309B88162E134800D1D3C9 /* Animal.h */,
 				00309B89162E134800D1D3C9 /* Animal.mm */,
