@@ -5,6 +5,7 @@
 //
 
 #import "Animal.h"
+#import "GameElement_Private.h"
 #import "GameModel.h"
 
 @implementation Animal
