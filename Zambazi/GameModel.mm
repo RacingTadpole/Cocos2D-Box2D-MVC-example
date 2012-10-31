@@ -113,7 +113,7 @@ static GameModel *sharedInstance = nil;
     // Update physics
     //
 
-    self.world->Step(dt, 8, 6);
+    self.world->Step(dt, 8, 3);
     
     //
     // And do any extra element-specific updates

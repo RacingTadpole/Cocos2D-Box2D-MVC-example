@@ -31,8 +31,11 @@
 //
 // keys are animal type _ animal number, e.g. "bear_1", "parrot_2"
 //
-@property (nonatomic, strong) NSMutableDictionary* sprites;      // keys NSString, values CCSprite
 @property (nonatomic, strong) NSMutableDictionary* currentActions;  // keys NSString, values @{@"name":NSString, @"action":CCActions}
+//
+// keys are GameElements
+//
+@property (nonatomic, strong) NSMutableDictionary* sprites;      // keys GameElements, values CCSprite
 
 @end
 
@@ -192,7 +195,6 @@
 }
 
 -(void) ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
-    // for testing purposes, everyone moves towards where you touched
     CGPoint touchLocation = [touch locationInView: [touch view]];		
     touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
     touchLocation = [self convertToNodeSpace:touchLocation];
